@@ -1,4 +1,5 @@
-import { Link } from 'react-router';
+import { PublicPageTitle } from '../../components/PublicPageTitle';
+import { CategoryCard } from '../../components/CategoryCard';
 
 export function CategoriesPage() {
     const categoriesData = [
@@ -17,25 +18,12 @@ export function CategoriesPage() {
     ];
 
     return (
-        <main>
-            <div className="container">
-                <div className="row">
-                    <h1 className="col-12 display-1 mb-5">Categories</h1>
-                </div>
-            </div>
+        <main className='min-page-height'>
+            <PublicPageTitle title='Categories' />
 
-            <div className="container px-4 py-5" id="featured-3">
-                <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                    {
-                        categoriesData.map(category => (
-                            <div className="feature col my-4">
-                                <h3 className="fs-2 text-body-emphasis">{category.title}</h3>
-                                <p>{category.description}</p>
-                                <p>Movies count: {category.moviesCount}</p>
-                                <Link to={'/categories/' + category.urlSlug} className="icon-link">Read more</Link>
-                            </div>
-                        ))
-                    }
+            <div className="container px-4" id="featured-3">
+                <div className="row g-4 row-cols-1 row-cols-lg-3">
+                    {categoriesData.map(category => <CategoryCard key={category.title} category={category} />)}
                 </div>
             </div>
         </main>
