@@ -1,7 +1,11 @@
+import { AdminCategoriesTable } from "../../../components/AdminCategoriesTable";
+import { AdminPageTitle } from "../../../components/AdminPageTitle";
+
 export function AdminCategoriesAllPage() {
     return (
         <main>
-            ADMIN CATEGORIES ALL
+            <AdminPageTitle title="All categories" />
+            <AdminCategoriesTable />
         </main>
     );
 }

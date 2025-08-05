@@ -1,7 +1,9 @@
+import { AdminPageTitle } from "../../../components/AdminPageTitle";
+
 export function AdminEditCategoryPage() {
     return (
         <main>
-            ADMIN EDIT CATEGORY
+            <AdminPageTitle title="Edit category" />
         </main>
     );
 }

@@ -1,7 +1,11 @@
+import { AdminMoviesTable } from "../../../components/AdminMoviesTable";
+import { AdminPageTitle } from "../../../components/AdminPageTitle";
+
 export function AdminMoviesAllPage() {
     return (
         <main>
-            ADMIN MOVIES ALL
+            <AdminPageTitle title="All movies" />
+            <AdminMoviesTable />
         </main>
     );
 }

@@ -1,7 +1,9 @@
+import { AdminPageTitle } from "../../../components/AdminPageTitle";
+
 export function AdminEditMoviePage() {
     return (
         <main>
-            ADMIN EDIT MOVIE
+            <AdminPageTitle title="Edit movie" />
         </main>
     );
 }

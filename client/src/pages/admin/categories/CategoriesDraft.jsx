@@ -1,7 +1,11 @@
+import { AdminCategoriesTable } from "../../../components/AdminCategoriesTable";
+import { AdminPageTitle } from "../../../components/AdminPageTitle";
+
 export function AdminCategoriesDraftPage() {
     return (
         <main>
-            ADMIN CATEGORIES DRAFT
+            <AdminPageTitle title="Draft categories" />
+            <AdminCategoriesTable />
         </main>
     );
 }
