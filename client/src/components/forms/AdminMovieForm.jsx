@@ -2,7 +2,7 @@ import { useState } from 'react';
 import defaultImg from '../../assets/default.png';
 
 export function AdminMovieForm({ movie }) {
-    const [img, ] = useState(movie?.img ?? '');
+    const [img, setImg] = useState(movie?.img ?? '');
     const [title, setTitle] = useState(movie?.title ?? '');
     const [url, setUrl] = useState(movie?.url ?? '');
     const [description, setDescription] = useState(movie?.description ?? '');
@@ -21,7 +21,7 @@ export function AdminMovieForm({ movie }) {
 
     return (
         <>
-            <form className="col-12 col-md-9 col-lg-6 mb-5">
+            <form className="col-12 col-md-9 col-lg-6 mt-5">
                 <img id="img_preview" className="d-block w-100 object-fit-contain"
                     style={{ height: '20rem', backgroundColor: '#eee' }}
                     src={img ? img : defaultImg} alt="Movie thumbnail" />
@@ -29,7 +29,7 @@ export function AdminMovieForm({ movie }) {
                 <input type="file" className="form-control" id="img" name="img" />
             </form>
 
-            <form className="col-12 col-md-9 col-lg-6">
+            <form className="col-12 col-md-9 col-lg-6 mt-5">
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Title</label>
                     <input onChange={e => setTitle(e.target.value)} value={title}

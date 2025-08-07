@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router";
 import logo from '../assets/react.svg';
 
 export function Header() {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
 
     return (
         <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
