@@ -1,4 +1,5 @@
 import { AdminPageTitle } from "../../../components/AdminPageTitle";
+import { Alert } from "../../../components/Alert";
 import { AdminCategoryForm } from "../../../components/forms/AdminCategoryForm";
 
 export function AdminEditCategoryPage() {
@@ -15,6 +16,9 @@ export function AdminEditCategoryPage() {
 
             <div className="container">
                 <div className="row">
+                    <div className="col-12 col-md-9 mt-5">
+                        <Alert text='Norima kategorija nerasta, todel redagavimas yra neimanomas.' />
+                    </div>
                     <AdminCategoryForm category={category} />
                 </div>
             </div>

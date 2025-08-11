@@ -1,8 +1,10 @@
 import { Link } from "react-router";
 import { PublicPageTitle } from "../../components/PublicPageTitle";
+import { useContext } from "react";
+import { UserContext } from "../../context/user/UserContext";
 
 export function LogoutPage() {
-    const isLoggedIn = false;
+    const { isLoggedIn } = useContext(UserContext);
 
     return (
         <main className="min-page-height">
