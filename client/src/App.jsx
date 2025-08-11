@@ -18,7 +18,7 @@ import { AdminCategoriesPublishedPage } from './pages/admin/categories/Categorie
 import { AdminCategoriesDraftPage } from './pages/admin/categories/CategoriesDraft';
 import { AdminMoviesAllPage } from './pages/admin/movies/MoviesAll';
 import { AdminNewMoviePage } from './pages/admin/movies/NewMovie';
-import { AdminMovieForm} from './pages/admin/movies/ViewMovie';
+import { AdminViewMoviePage } from './pages/admin/movies/ViewMovie';
 import { AdminEditMoviePage } from './pages/admin/movies/EditMovie';
 import { AdminMoviesPublishedPage } from './pages/admin/movies/MoviesPublished';
 import { AdminMoviesDraftPage } from './pages/admin/movies/MoviesDraft';
@@ -46,7 +46,7 @@ export function App() {
 
             <Route path='/admin/movies' element={<AdminMoviesAllPage />} />
             <Route path='/admin/movies/new' element={<AdminNewMoviePage />} />
-            <Route path='/admin/movies/:movie' element={<AdminMovieForm />} />
+            <Route path='/admin/movies/:movie' element={<AdminViewMoviePage />} />
             <Route path='/admin/movies/:movie/edit' element={<AdminEditMoviePage />} />
             <Route path='/admin/movies/published' element={<AdminMoviesPublishedPage />} />
             <Route path='/admin/movies/draft' element={<AdminMoviesDraftPage />} />
