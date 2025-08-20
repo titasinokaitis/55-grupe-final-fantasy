@@ -19,7 +19,11 @@ export function AdminMoviesTableRow({ data }) {
             <td><img src={imgPath} alt="Movie thumbnail" style={{ maxHeight: '4rem' }} /></td>
             <td><Link to={"/admin/movies/" + data.url_slug}>{data.title}</Link></td>
             <td><span className="badge text-bg-success">Provided</span></td>
-            <td>{formatDuration(data.duration_in_minutes)}</td>
+            <td>{
+                data.duration_in_minutes
+                    ? formatDuration(data.duration_in_minutes)
+                    : <span class="badge text-bg-warning">Not selected</span>
+            }</td>
             <td>
                 {
                     data.category_id
