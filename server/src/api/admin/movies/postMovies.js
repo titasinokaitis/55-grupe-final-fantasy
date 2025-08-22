@@ -50,7 +50,9 @@ export async function postAdminMovies(req, res) {
         if (response.length > 0) {
             return res.status(400).json({
                 status: 'error',
-                msg: 'Tokia filmo nuoroda jau uzimta',
+                msg: {
+                    url: 'Tokia filmo nuoroda jau uzimta',
+                },
             });
         }
     } catch (error) {
